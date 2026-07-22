@@ -1,0 +1,2 @@
+This file contains the issues faced while running the application locally before the commit
+- CORS issue : no response from backend to frontend fixed by importing the CORS middleware
