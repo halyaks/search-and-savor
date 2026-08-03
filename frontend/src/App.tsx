@@ -9,10 +9,7 @@ function App() {
   
   useEffect(() => {
 
-    axios
-      .get(
-`${import.meta.env.VITE_API_URL}/`
-)
+  axios.get("/api/")
       .then((response) => {
 
         setMessage(response.data.message);
