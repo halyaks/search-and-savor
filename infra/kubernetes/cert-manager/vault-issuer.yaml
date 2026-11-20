@@ -1,0 +1,17 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: search-savor-vault-issuer
+  namespace: search-savor
+spec:
+  vault:
+    server: http://vault.vault.svc.cluster.local:8200
+    path: pki_int/sign/search-savor-gateway
+    auth:
+      kubernetes:
+        mountPath:  /v1/auth/kubernetes
+        role: cert-manager-pki
+        serviceAccountRef:
+          name: cert-manager-vault-auth
+          audiences:
+            - vault

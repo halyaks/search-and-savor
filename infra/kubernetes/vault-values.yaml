@@ -1,0 +1,19 @@
+
+global:
+  enabled: true
+
+injector:
+  enabled: false
+
+server:
+  enabled: true
+
+  dataStorage:
+    enabled: true
+    size: 1Gi
+
+  standalone:
+    enabled: true
+
+  service:
+    enabled: true
